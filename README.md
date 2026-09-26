@@ -33,4 +33,3 @@ is provided.
 ## Links
 
 - Live site: <https://sharesettings.fyi>
-- Main application repo: [CamoMano/ShareSettings](https://github.com/CamoMano/ShareSettings)
