@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Content or policy violations
+    url: https://sharesettings.fyi
+    about: Use the Flag button on the report in the app instead of opening an issue. Moderators handle flags in the moderation queue.
+  - name: ShareSettings website
+    url: https://sharesettings.fyi
+    about: Browse and share game settings, performance profiles, and layouts.

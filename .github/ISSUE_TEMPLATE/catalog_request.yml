@@ -1,0 +1,56 @@
+name: Catalog request
+description: Request a game or hardware profile be added to the catalog
+labels: ["catalog"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template when a game or piece of hardware is missing from
+        the site's catalog and you can't submit a report for it. One item
+        per issue, please.
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: What is missing?
+      options:
+        - A game
+        - A hardware profile (GPU, CPU, or prebuilt device)
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: Exact name
+      description: The official name of the game or hardware, as the manufacturer/publisher spells it.
+    validations:
+      required: true
+
+  - type: input
+    id: link
+    attributes:
+      label: Link (Steam page, official product page, or spec sheet)
+    validations:
+      required: true
+
+  - type: textarea
+    id: game-details
+    attributes:
+      label: Game details
+      description: Optional. Steam App ID if you know it, and anything unusual (multiple editions, non-Steam release, region locking).
+
+  - type: textarea
+    id: hardware-details
+    attributes:
+      label: Hardware details
+      description: |
+        Optional, for hardware requests. The structured specs the site
+        uses: GPU VRAM (GB), CPU core count, CPU thread count — plus RAM
+        if relevant. A link to an official spec sheet covers this.
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Anything else?
+      description: Optional. Context that helps us prioritize, e.g. you tried to submit a report and hit a dead end.

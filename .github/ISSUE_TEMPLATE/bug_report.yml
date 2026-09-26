@@ -1,0 +1,91 @@
+name: Bug report
+description: Something on the site is broken or behaves unexpectedly
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. Fill in what you can —
+        reproducible steps are the most important part.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the bug.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Home / search
+        - Game or device pages (browsing, filters, pagination)
+        - Viewing a report
+        - Submitting / editing a report (form, hardware autofill)
+        - Comments
+        - Ratings (thumb rating, star rating)
+        - Sign-in / account (Steam sign-in, profile)
+        - Notifications
+        - Admin / moderation tools
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: url
+    attributes:
+      label: URL / page
+      description: The address of the page where the bug occurred, if applicable.
+      placeholder: https://sharesettings.fyi/...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Numbered steps someone else can follow to see the same problem.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. See the error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does it happen?
+      options:
+        - Every time (reliably)
+        - Sometimes
+        - Only once so far
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Browser / device info
+      description: Browser and version, OS, and the device you were using (e.g. Steam Deck, Windows desktop).
+      placeholder: "Firefox 129, Windows 11, desktop PC"
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Console errors or screenshots
+      description: |
+        Optional. Any errors from the browser console (F12 → Console), or
+        screenshots that show the problem. Paste console output as text.
